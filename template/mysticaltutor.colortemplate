@@ -1,0 +1,177 @@
+# vim: ft=colortemplate fdm=marker
+
+# Information {{{
+# Mandatory
+Full name: Mystical Tutor
+Short name: mysticaltutor
+Author: Cem Aksoylar
+Maintainer: Cem Aksoylar
+# Optional
+Website: https://github.com/caksoylar/vim-mysticaltutor
+Description: Low-contrast flat colorscheme
+License:
+Terminal Colors: 256,16
+Option Prefix: mysticaltutor
+# }}}
+
+# Documentation {{{
+# Include: _help.colortemplate
+# }}}
+
+Background: dark
+
+# Color palette {{{
+# Color name         GUI       Base256   Base16 (optional)
+Color: black         #1e2227   ~         Black
+Color: darkgray      #30343c   ~         DarkGray
+Color: gray          #a0a4aa   ~         Gray
+Color: red           #e05f87   ~         DarkRed
+Color: brightred     #dfb4c9   ~         Red
+Color: green         #8bbe67   ~         DarkGreen
+Color: brightgreen   #b1c6ac   ~         Green
+Color: yellow        #bb8e67   ~         DarkYellow
+Color: brightyellow  #c3b470   ~         Yellow
+Color: darkblue      #304a68   ~         DarkBlue
+Color: blue          #5c8ec7   ~         DarkBlue
+Color: brightblue    #a0b4cf   ~         Blue
+Color: magenta       #8b5fc7   ~         DarkMagenta
+Color: brightmagenta #b1a3df   ~         Magenta
+Color: cyan          #5cbe97   ~         DarkCyan
+Color: brightcyan    #a0c4bd   ~         Cyan
+Color: white         #d9d9d9   ~         Gray
+Color: brightwhite   #ffffff   ~         White
+# }}}
+
+# Default highlight groups {{{
+verbatim
+if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
+endverbatim
+    # Transparent background
+    Normal    white   none
+    # See `:help terminal-size-color`
+    Terminal  white   none
+verbatim
+else
+endverbatim
+    # Opaque background
+    Normal    white   black
+    Terminal  white   black
+verbatim
+endif
+endverbatim
+
+# Group             Foreground    Background    Attributes
+ColorColumn         none          darkgray
+Conceal             none          none
+Cursor              none          none          reverse
+CursorColumn        none          none          bold
+CursorLine          none          darkgray
+CursorLineNr        brightwhite   darkgray
+DiffAdd             green         darkgray      reverse
+DiffChange          brightyellow  darkgray      reverse
+DiffDelete          red           darkgray      reverse
+DiffText            yellow        darkgray      reverse
+Directory           cyan          none
+EndOfBuffer      -> NonText
+ErrorMsg            black         red
+FoldColumn       -> LineNr
+Folded              gray          none          italic
+IncSearch           yellow        black         t=reverse g=standout
+LineNr              gray          none
+MatchParen          cyan          none
+ModeMsg             cyan          none
+MoreMsg             cyan          none
+NonText             gray          none
+Pmenu               white         darkblue
+PmenuSbar           none          darkgray
+PmenuSel            white         blue
+PmenuThumb          none          blue
+Question            green         none
+QuickFixLine     -> Search
+Search              blue          black         t=reverse g=standout
+SignColumn          none          none
+SpecialKey          gray          none
+SpellBad            brightred     black         s=red
+SpellCap            brightblue    black         s=blue
+SpellLocal          brightmagenta black         s=magenta
+SpellRare           brightcyan    black         s=cyan reverse
+StatusLine          white         darkblue
+StatusLineNC        gray          darkgray
+StatusLineTerm   -> StatusLine
+StatusLineTermNC -> StatusLineNC
+TabLine             gray          darkgray
+TabLineFill         white         darkgray
+TabLineSel          white         darkblue      bold
+Title               brightwhite   none
+VertSplit           darkgray      darkgray
+Visual              brightblue    darkgray      reverse
+VisualNOS           none          none          underline
+WarningMsg          black         brightyellow
+WildMenu            black         brightblue
+# Other conventional group names (see `:help group-name`)
+Boolean          -> Constant
+Character        -> Constant
+Comment             gray          none
+Conditional      -> Statement
+Constant            green         none
+Define           -> PreProc
+Debug            -> Special
+Delimiter        -> Special
+Error               red           none          t=reverse,bold g=standout,bold
+Exception        -> Statement
+Float            -> Constant
+Function         -> Identifier
+Identifier          cyan          none
+Ignore              none          none
+Include          -> PreProc
+Keyword          -> Statement
+Label            -> Statement
+Macro            -> PreProc
+Number           -> Constant
+Operator         -> Statement
+PreCondit        -> PreProc
+PreProc             brightgreen   none
+Repeat           -> Statement
+Special             yellow        none
+SpecialChar      -> Special
+SpecialComment   -> Special
+Statement           blue          none
+StorageClass     -> Type
+String           -> Constant
+Structure        -> Type
+Tag              -> Special
+Todo                cyan          none          reverse
+Type                magenta       none
+Typedef          -> Type
+Underlined          none          none          underline
+# See `:help lCursor`
+lCursor          -> Cursor
+# See `:help CursorIM`
+# CursorIM            none          fg
+# See `:help window-toolbar`
+# ToolbarLine         none          black
+# ToolbarButton       white         black         bold
+# }}}
+
+# Terminal colors {{{
+verbatim
+let g:terminal_ansi_colors = [
+    \ '@guiblack',
+    \ '@guired',
+    \ '@guigreen',
+    \ '@guiyellow',
+    \ '@guiblue',
+    \ '@guimagenta',
+    \ '@guicyan',
+    \ '@guiwhite',
+    \ '@guidarkgray',
+    \ '@guibrightred',
+    \ '@guibrightgreen',
+    \ '@guibrightyellow',
+    \ '@guibrightblue',
+    \ '@guibrightmagenta',
+    \ '@guibrightcyan',
+    \ '@guibrightwhite'
+\ ]
+endverbatim
+# }}}
