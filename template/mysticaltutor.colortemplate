@@ -71,7 +71,7 @@ DiffAdd             green         darkgray      reverse
 DiffChange          brightyellow  darkgray      reverse
 DiffDelete          red           darkgray      reverse
 DiffText            yellow        darkgray      reverse
-Directory           cyan          none
+Directory           blue          none
 EndOfBuffer      -> NonText
 ErrorMsg            black         red
 FoldColumn       -> LineNr
@@ -107,7 +107,7 @@ VertSplit           darkgray      darkgray
 Visual              brightblue    darkgray      reverse
 VisualNOS           none          none          underline
 WarningMsg          black         brightyellow
-WildMenu            black         brightblue
+WildMenu            cyan          darkblue      bold
 # Other conventional group names (see `:help group-name`)
 Boolean          -> Constant
 Character        -> Constant

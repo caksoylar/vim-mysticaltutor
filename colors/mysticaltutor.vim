@@ -4,7 +4,7 @@
 " Maintainer:   Cem Aksoylar
 " Website:      https://github.com/caksoylar/vim-mysticaltutor
 " License:      Vim License (see `:help license`)
-" Last Updated: Sun 06 Jan 2019 10:35:55 PM STD
+" Last Updated: Tue 08 Jan 2019 11:47:50 AM STD
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'mysticaltutor_use16', &t_Co < 256) ? 16 : 256))
@@ -40,7 +40,7 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi DiffChange ctermfg=143 ctermbg=236 guifg=#c3b470 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi DiffDelete ctermfg=168 ctermbg=236 guifg=#e05f87 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi DiffText ctermfg=137 ctermbg=236 guifg=#bb8e67 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi Directory ctermfg=72 ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi Directory ctermfg=67 ctermbg=NONE guifg=#5c8ec7 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link EndOfBuffer NonText
   hi ErrorMsg ctermfg=235 ctermbg=168 guifg=#1e2227 guibg=#e05f87 guisp=NONE cterm=NONE gui=NONE
   hi! link FoldColumn LineNr
@@ -76,7 +76,7 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi Visual ctermfg=110 ctermbg=236 guifg=#a0b4cf guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualNOS ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
   hi WarningMsg ctermfg=235 ctermbg=143 guifg=#1e2227 guibg=#c3b470 guisp=NONE cterm=NONE gui=NONE
-  hi WildMenu ctermfg=235 ctermbg=110 guifg=#1e2227 guibg=#a0b4cf guisp=NONE cterm=NONE gui=NONE
+  hi WildMenu ctermfg=72 ctermbg=24 guifg=#5cbe97 guibg=#304a68 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi! link Boolean Constant
   hi! link Character Constant
   hi Comment ctermfg=248 ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -152,7 +152,7 @@ hi DiffAdd ctermfg=DarkGreen ctermbg=DarkGray guifg=#8bbe67 guibg=#30343c guisp=
 hi DiffChange ctermfg=Yellow ctermbg=DarkGray guifg=#c3b470 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffDelete ctermfg=DarkRed ctermbg=DarkGray guifg=#e05f87 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffText ctermfg=DarkYellow ctermbg=DarkGray guifg=#bb8e67 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi Directory ctermfg=DarkCyan ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Directory ctermfg=DarkBlue ctermbg=NONE guifg=#5c8ec7 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link EndOfBuffer NonText
 hi ErrorMsg ctermfg=Black ctermbg=DarkRed guifg=#1e2227 guibg=#e05f87 guisp=NONE cterm=NONE gui=NONE
 hi! link FoldColumn LineNr
@@ -188,7 +188,7 @@ hi VertSplit ctermfg=DarkGray ctermbg=DarkGray guifg=#30343c guibg=#30343c guisp
 hi Visual ctermfg=Blue ctermbg=DarkGray guifg=#a0b4cf guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi VisualNOS ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
 hi WarningMsg ctermfg=Black ctermbg=Yellow guifg=#1e2227 guibg=#c3b470 guisp=NONE cterm=NONE gui=NONE
-hi WildMenu ctermfg=Black ctermbg=Blue guifg=#1e2227 guibg=#a0b4cf guisp=NONE cterm=NONE gui=NONE
+hi WildMenu ctermfg=DarkCyan ctermbg=DarkBlue guifg=#5cbe97 guibg=#304a68 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi! link Boolean Constant
 hi! link Character Constant
 hi Comment ctermfg=Gray ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -278,7 +278,7 @@ finish
 " DiffChange          brightyellow  darkgray      reverse
 " DiffDelete          red           darkgray      reverse
 " DiffText            yellow        darkgray      reverse
-" Directory           cyan          none
+" Directory           blue          none
 " EndOfBuffer      -> NonText
 " ErrorMsg            black         red
 " FoldColumn       -> LineNr
@@ -314,7 +314,7 @@ finish
 " Visual              brightblue    darkgray      reverse
 " VisualNOS           none          none          underline
 " WarningMsg          black         brightyellow
-" WildMenu            black         brightblue
+" WildMenu            cyan          darkblue      bold
 " Boolean          -> Constant
 " Character        -> Constant
 " Comment             gray          none
