@@ -4,7 +4,7 @@
 " Maintainer:   Cem Aksoylar
 " Website:      https://github.com/caksoylar/vim-mysticaltutor
 " License:      Vim License (see `:help license`)
-" Last Updated: Mon 31 Dec 2018 12:46:32 PM STD
+" Last Updated: Sun 06 Jan 2019 10:35:55 PM STD
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'mysticaltutor_use16', &t_Co < 256) ? 16 : 256))
@@ -64,7 +64,7 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi SpellCap ctermfg=110 ctermbg=235 guifg=#a0b4cf guibg=#1e2227 guisp=#5c8ec7 cterm=NONE gui=NONE
   hi SpellLocal ctermfg=147 ctermbg=235 guifg=#b1a3df guibg=#1e2227 guisp=#8b5fc7 cterm=NONE gui=NONE
   hi SpellRare ctermfg=152 ctermbg=235 guifg=#a0c4bd guibg=#1e2227 guisp=#5cbe97 cterm=NONE,reverse gui=NONE,reverse
-  hi StatusLine ctermfg=253 ctermbg=24 guifg=#d9d9d9 guibg=#304a68 guisp=NONE cterm=NONE gui=NONE
+  hi StatusLine ctermfg=253 ctermbg=24 guifg=#d9d9d9 guibg=#304a68 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi StatusLineNC ctermfg=248 ctermbg=236 guifg=#a0a4aa guibg=#30343c guisp=NONE cterm=NONE gui=NONE
   hi! link StatusLineTerm StatusLine
   hi! link StatusLineTermNC StatusLineNC
@@ -176,7 +176,7 @@ hi SpellBad ctermfg=Red ctermbg=Black guifg=#dfb4c9 guibg=#1e2227 guisp=#e05f87 
 hi SpellCap ctermfg=Blue ctermbg=Black guifg=#a0b4cf guibg=#1e2227 guisp=#5c8ec7 cterm=NONE gui=NONE
 hi SpellLocal ctermfg=Magenta ctermbg=Black guifg=#b1a3df guibg=#1e2227 guisp=#8b5fc7 cterm=NONE gui=NONE
 hi SpellRare ctermfg=Cyan ctermbg=Black guifg=#a0c4bd guibg=#1e2227 guisp=#5cbe97 cterm=NONE,reverse gui=NONE,reverse
-hi StatusLine ctermfg=Gray ctermbg=DarkBlue guifg=#d9d9d9 guibg=#304a68 guisp=NONE cterm=NONE gui=NONE
+hi StatusLine ctermfg=Gray ctermbg=DarkBlue guifg=#d9d9d9 guibg=#304a68 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi StatusLineNC ctermfg=Gray ctermbg=DarkGray guifg=#a0a4aa guibg=#30343c guisp=NONE cterm=NONE gui=NONE
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
@@ -302,7 +302,7 @@ finish
 " SpellCap            brightblue    black         s=blue
 " SpellLocal          brightmagenta black         s=magenta
 " SpellRare           brightcyan    black         s=cyan reverse
-" StatusLine          white         darkblue
+" StatusLine          white         darkblue      bold
 " StatusLineNC        gray          darkgray
 " StatusLineTerm   -> StatusLine
 " StatusLineTermNC -> StatusLineNC

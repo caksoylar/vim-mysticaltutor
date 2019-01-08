@@ -95,7 +95,7 @@ SpellBad            brightred     black         s=red
 SpellCap            brightblue    black         s=blue
 SpellLocal          brightmagenta black         s=magenta
 SpellRare           brightcyan    black         s=cyan reverse
-StatusLine          white         darkblue
+StatusLine          white         darkblue      bold
 StatusLineNC        gray          darkgray
 StatusLineTerm   -> StatusLine
 StatusLineTermNC -> StatusLineNC
