@@ -4,7 +4,7 @@
 " Maintainer:   Cem Aksoylar
 " Website:      https://github.com/caksoylar/vim-mysticaltutor
 " License:      Vim License (see `:help license`)
-" Last Updated: Thu 10 Jan 2019 11:04:43 PM STD
+" Last Updated: Thu 10 Jan 2019 11:37:14 PM STD
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'mysticaltutor_use16', &t_Co < 256) ? 16 : 256))
@@ -38,11 +38,11 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi CursorLineNr ctermfg=231 ctermbg=236 guifg=#ffffff guibg=#30343c guisp=NONE cterm=NONE gui=NONE
   hi DiffAdd ctermfg=107 ctermbg=236 guifg=#8bbe67 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi DiffChange ctermfg=143 ctermbg=236 guifg=#c3b470 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi DiffDelete ctermfg=168 ctermbg=236 guifg=#e05f87 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi DiffDelete ctermfg=168 ctermbg=236 guifg=#e07093 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi DiffText ctermfg=137 ctermbg=236 guifg=#bb8e67 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi Directory ctermfg=67 ctermbg=NONE guifg=#5c8ec7 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link EndOfBuffer NonText
-  hi ErrorMsg ctermfg=235 ctermbg=168 guifg=#1e2227 guibg=#e05f87 guisp=NONE cterm=NONE gui=NONE
+  hi ErrorMsg ctermfg=235 ctermbg=168 guifg=#1e2227 guibg=#e07093 guisp=NONE cterm=NONE gui=NONE
   hi! link FoldColumn LineNr
   hi Folded ctermfg=248 ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE,italic gui=NONE,italic
   hi IncSearch ctermfg=137 ctermbg=235 guifg=#bb8e67 guibg=#1e2227 guisp=NONE cterm=NONE,reverse gui=NONE,standout
@@ -60,7 +60,7 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi Search ctermfg=67 ctermbg=235 guifg=#5c8ec7 guibg=#1e2227 guisp=NONE cterm=NONE,reverse gui=NONE,standout
   hi SignColumn ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi SpecialKey ctermfg=248 ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi SpellBad ctermfg=182 ctermbg=235 guifg=#dfb4c9 guibg=#1e2227 guisp=#e05f87 cterm=NONE gui=NONE
+  hi SpellBad ctermfg=182 ctermbg=235 guifg=#dfb4c9 guibg=#1e2227 guisp=#e07093 cterm=NONE gui=NONE
   hi SpellCap ctermfg=110 ctermbg=235 guifg=#a0b4cf guibg=#1e2227 guisp=#5c8ec7 cterm=NONE gui=NONE
   hi SpellLocal ctermfg=147 ctermbg=235 guifg=#b1a3df guibg=#1e2227 guisp=#8b5fc7 cterm=NONE gui=NONE
   hi SpellRare ctermfg=152 ctermbg=235 guifg=#a0c4bd guibg=#1e2227 guisp=#5cbe97 cterm=NONE,reverse gui=NONE,reverse
@@ -81,11 +81,11 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi! link Character Constant
   hi Comment ctermfg=248 ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Conditional Statement
-  hi Constant ctermfg=168 ctermbg=NONE guifg=#e05f87 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi Constant ctermfg=168 ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Define PreProc
   hi! link Debug Special
   hi! link Delimiter Special
-  hi Error ctermfg=168 ctermbg=NONE guifg=#e05f87 guibg=NONE guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,standout
+  hi Error ctermfg=168 ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,standout
   hi! link Exception Statement
   hi! link Float Constant
   hi Function ctermfg=147 ctermbg=NONE guifg=#b1a3df guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -115,7 +115,7 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi! link lCursor Cursor
   let g:terminal_ansi_colors = [
         \ '#1e2227',
-        \ '#e05f87',
+        \ '#e07093',
         \ '#8bbe67',
         \ '#bb8e67',
         \ '#5c8ec7',
@@ -150,11 +150,11 @@ hi CursorLine ctermfg=NONE ctermbg=DarkGray guifg=NONE guibg=#30343c guisp=NONE 
 hi CursorLineNr ctermfg=White ctermbg=DarkGray guifg=#ffffff guibg=#30343c guisp=NONE cterm=NONE gui=NONE
 hi DiffAdd ctermfg=DarkGreen ctermbg=DarkGray guifg=#8bbe67 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffChange ctermfg=Yellow ctermbg=DarkGray guifg=#c3b470 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi DiffDelete ctermfg=DarkRed ctermbg=DarkGray guifg=#e05f87 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi DiffDelete ctermfg=DarkRed ctermbg=DarkGray guifg=#e07093 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffText ctermfg=DarkYellow ctermbg=DarkGray guifg=#bb8e67 guibg=#30343c guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Directory ctermfg=DarkBlue ctermbg=NONE guifg=#5c8ec7 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link EndOfBuffer NonText
-hi ErrorMsg ctermfg=Black ctermbg=DarkRed guifg=#1e2227 guibg=#e05f87 guisp=NONE cterm=NONE gui=NONE
+hi ErrorMsg ctermfg=Black ctermbg=DarkRed guifg=#1e2227 guibg=#e07093 guisp=NONE cterm=NONE gui=NONE
 hi! link FoldColumn LineNr
 hi Folded ctermfg=Gray ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE,italic gui=NONE,italic
 hi IncSearch ctermfg=DarkYellow ctermbg=Black guifg=#bb8e67 guibg=#1e2227 guisp=NONE cterm=NONE,reverse gui=NONE,standout
@@ -172,7 +172,7 @@ hi! link QuickFixLine Search
 hi Search ctermfg=DarkBlue ctermbg=Black guifg=#5c8ec7 guibg=#1e2227 guisp=NONE cterm=NONE,reverse gui=NONE,standout
 hi SignColumn ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SpecialKey ctermfg=Gray ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi SpellBad ctermfg=Red ctermbg=Black guifg=#dfb4c9 guibg=#1e2227 guisp=#e05f87 cterm=NONE gui=NONE
+hi SpellBad ctermfg=Red ctermbg=Black guifg=#dfb4c9 guibg=#1e2227 guisp=#e07093 cterm=NONE gui=NONE
 hi SpellCap ctermfg=Blue ctermbg=Black guifg=#a0b4cf guibg=#1e2227 guisp=#5c8ec7 cterm=NONE gui=NONE
 hi SpellLocal ctermfg=Magenta ctermbg=Black guifg=#b1a3df guibg=#1e2227 guisp=#8b5fc7 cterm=NONE gui=NONE
 hi SpellRare ctermfg=Cyan ctermbg=Black guifg=#a0c4bd guibg=#1e2227 guisp=#5cbe97 cterm=NONE,reverse gui=NONE,reverse
@@ -193,11 +193,11 @@ hi! link Boolean Constant
 hi! link Character Constant
 hi Comment ctermfg=Gray ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Conditional Statement
-hi Constant ctermfg=DarkRed ctermbg=NONE guifg=#e05f87 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Constant ctermfg=DarkRed ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Define PreProc
 hi! link Debug Special
 hi! link Delimiter Special
-hi Error ctermfg=DarkRed ctermbg=NONE guifg=#e05f87 guibg=NONE guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,standout
+hi Error ctermfg=DarkRed ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,standout
 hi! link Exception Statement
 hi! link Float Constant
 hi Function ctermfg=Magenta ctermbg=NONE guifg=#b1a3df guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -227,7 +227,7 @@ hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=N
 hi! link lCursor Cursor
 let g:terminal_ansi_colors = [
       \ '#1e2227',
-      \ '#e05f87',
+      \ '#e07093',
       \ '#8bbe67',
       \ '#bb8e67',
       \ '#5c8ec7',
@@ -249,7 +249,7 @@ finish
 " Color: black         #1e2227   ~         Black
 " Color: darkgray      #30343c   ~         DarkGray
 " Color: gray          #a0a4aa   ~         Gray
-" Color: red           #e05f87   ~         DarkRed
+" Color: red           #e07093   ~         DarkRed
 " Color: brightred     #dfb4c9   ~         Red
 " Color: green         #8bbe67   ~         DarkGreen
 " Color: brightgreen   #b1c6ac   ~         Green
