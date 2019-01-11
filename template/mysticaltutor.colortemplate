@@ -113,14 +113,14 @@ Boolean          -> Constant
 Character        -> Constant
 Comment             gray          none
 Conditional      -> Statement
-Constant            green         none
+Constant            red           none
 Define           -> PreProc
 Debug            -> Special
 Delimiter        -> Special
 Error               red           none          t=reverse,bold g=standout,bold
 Exception        -> Statement
 Float            -> Constant
-Function         -> Identifier
+Function            brightmagenta none
 Identifier          cyan          none
 Ignore              none          none
 Include          -> PreProc
@@ -137,7 +137,7 @@ SpecialChar      -> Special
 SpecialComment   -> Special
 Statement           blue          none
 StorageClass     -> Type
-String           -> Constant
+String              green         none
 Structure        -> Type
 Tag              -> Special
 Todo                cyan          none          reverse

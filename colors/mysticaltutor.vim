@@ -4,7 +4,7 @@
 " Maintainer:   Cem Aksoylar
 " Website:      https://github.com/caksoylar/vim-mysticaltutor
 " License:      Vim License (see `:help license`)
-" Last Updated: Tue 08 Jan 2019 11:47:50 AM STD
+" Last Updated: Thu 10 Jan 2019 11:04:43 PM STD
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'mysticaltutor_use16', &t_Co < 256) ? 16 : 256))
@@ -81,14 +81,14 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi! link Character Constant
   hi Comment ctermfg=248 ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Conditional Statement
-  hi Constant ctermfg=107 ctermbg=NONE guifg=#8bbe67 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi Constant ctermfg=168 ctermbg=NONE guifg=#e05f87 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Define PreProc
   hi! link Debug Special
   hi! link Delimiter Special
   hi Error ctermfg=168 ctermbg=NONE guifg=#e05f87 guibg=NONE guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,standout
   hi! link Exception Statement
   hi! link Float Constant
-  hi! link Function Identifier
+  hi Function ctermfg=147 ctermbg=NONE guifg=#b1a3df guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Identifier ctermfg=72 ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Ignore ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Include PreProc
@@ -105,7 +105,7 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi! link SpecialComment Special
   hi Statement ctermfg=67 ctermbg=NONE guifg=#5c8ec7 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link StorageClass Type
-  hi! link String Constant
+  hi String ctermfg=107 ctermbg=NONE guifg=#8bbe67 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Structure Type
   hi! link Tag Special
   hi Todo ctermfg=72 ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -193,14 +193,14 @@ hi! link Boolean Constant
 hi! link Character Constant
 hi Comment ctermfg=Gray ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Conditional Statement
-hi Constant ctermfg=DarkGreen ctermbg=NONE guifg=#8bbe67 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Constant ctermfg=DarkRed ctermbg=NONE guifg=#e05f87 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Define PreProc
 hi! link Debug Special
 hi! link Delimiter Special
 hi Error ctermfg=DarkRed ctermbg=NONE guifg=#e05f87 guibg=NONE guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,standout
 hi! link Exception Statement
 hi! link Float Constant
-hi! link Function Identifier
+hi Function ctermfg=Magenta ctermbg=NONE guifg=#b1a3df guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Identifier ctermfg=DarkCyan ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Ignore ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Include PreProc
@@ -217,7 +217,7 @@ hi! link SpecialChar Special
 hi! link SpecialComment Special
 hi Statement ctermfg=DarkBlue ctermbg=NONE guifg=#5c8ec7 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link StorageClass Type
-hi! link String Constant
+hi String ctermfg=DarkGreen ctermbg=NONE guifg=#8bbe67 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Structure Type
 hi! link Tag Special
 hi Todo ctermfg=DarkCyan ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -319,14 +319,14 @@ finish
 " Character        -> Constant
 " Comment             gray          none
 " Conditional      -> Statement
-" Constant            green         none
+" Constant            red           none
 " Define           -> PreProc
 " Debug            -> Special
 " Delimiter        -> Special
 " Error               red           none          t=reverse,bold g=standout,bold
 " Exception        -> Statement
 " Float            -> Constant
-" Function         -> Identifier
+" Function            brightmagenta none
 " Identifier          cyan          none
 " Ignore              none          none
 " Include          -> PreProc
@@ -343,7 +343,7 @@ finish
 " SpecialComment   -> Special
 " Statement           blue          none
 " StorageClass     -> Type
-" String           -> Constant
+" String              green         none
 " Structure        -> Type
 " Tag              -> Special
 " Todo                cyan          none          reverse
