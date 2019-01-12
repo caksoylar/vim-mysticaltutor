@@ -11,6 +11,8 @@ Put `colorscheme mysticaltutor` in your vimrc to enable.
 ## Terminal themes
 Although not necessary for the Vim colorscheme to work, themes for some terminals are available under the `terminal` folder. Note that some of these are not tested, feel free to open an issue if you encounter problems.
 
+A simple tmux theme (displayed below) that you can append to your `tmux.conf` can also be found in the same folder. It doesn't require any special symbols or anything, but assumes you are using the terminal theme.
+
 ![terminal theme](https://caksoylar.github.io/mysticaltutor/images/mystical-terminal.png)
 
 ## Credits
@@ -22,19 +24,24 @@ Although not necessary for the Vim colorscheme to work, themes for some terminal
 ## Todo
 Still under active development, so colors and styles might change.
 * Overhaul `Spell*` highlights by using underline and undercurl instead of foreground colors
+* Fix `PmenuSel` for 16 colors.
 
 ## License
 Same as the Vim license.
 
 ## More screenshots
 Diff highlights:
+
 ![diff](https://caksoylar.github.io/mysticaltutor/images/mystical-diff.png)
 
 256 colors:
+
 ![256 color](https://caksoylar.github.io/mysticaltutor/images/mystical-256.png)
 
 16 colors with own terminal theme:
+
 ![256 color](https://caksoylar.github.io/mysticaltutor/images/mystical-16.png)
 
 16 colors with Windows 10 default theme (Campbell):
+
 ![256 color](https://caksoylar.github.io/mysticaltutor/images/mystical-16-win32.png)
