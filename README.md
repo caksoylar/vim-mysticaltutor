@@ -26,9 +26,6 @@ Still under active development, so colors and styles might change.
 * Overhaul `Spell*` highlights by using underline and undercurl instead of foreground colors
 * Fix `PmenuSel` for 16 colors.
 
-## License
-Same as the Vim license.
-
 ## More screenshots
 Diff highlights:
 
