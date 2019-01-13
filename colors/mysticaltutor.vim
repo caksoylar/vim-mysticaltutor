@@ -3,8 +3,8 @@
 " Author:       Cem Aksoylar
 " Maintainer:   Cem Aksoylar
 " Website:      https://github.com/caksoylar/vim-mysticaltutor
-" License:      Vim License (see `:help license`)
-" Last Updated: Thu 10 Jan 2019 11:37:14 PM STD
+" License:      MIT
+" Last Updated: Sat 12 Jan 2019 11:36:48 PM STD
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'mysticaltutor_use16', &t_Co < 256) ? 16 : 256))

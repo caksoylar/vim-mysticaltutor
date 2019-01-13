@@ -9,7 +9,7 @@ Maintainer: Cem Aksoylar
 # Optional
 Website: https://github.com/caksoylar/vim-mysticaltutor
 Description: Low-contrast flat colorscheme
-License:
+License: MIT
 Terminal Colors: 256,16
 Option Prefix: mysticaltutor
 # }}}
