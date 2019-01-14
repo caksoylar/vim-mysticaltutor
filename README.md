@@ -1,5 +1,5 @@
 # Mystical Tutor 📚🔮
-Mystical Tutor is a dark, low-contrast, flat colorscheme for Vim and terminals. Although it works best with true colors (in GVim and supporting terminals with `set termguicolors`, it degrades gracefully to 256 and 16 colors for use with compatible terminals. Special attention has been paid to legibility in diff mode.
+Mystical Tutor is a dark, low-contrast, flat colorscheme for Vim and terminals. Although it works best with true colors (in GVim and supporting terminals with `set termguicolors`), it degrades gracefully to 256 and 16 colors for use with compatible terminals. Special attention has been paid to legibility in diff mode.
 
 ![main image](https://caksoylar.github.io/mysticaltutor/images/mystical-24bit.png)
 
@@ -24,7 +24,7 @@ A simple tmux theme (displayed below) that you can append to your `tmux.conf` ca
 ## Todo
 Still under active development, so colors and styles might change.
 * Overhaul `Spell*` highlights by using underline and undercurl instead of foreground colors
-* Fix `PmenuSel` for 16 colors.
+* Fix `PmenuSel` for 16 colors
 
 ## More screenshots
 Diff highlights:
