@@ -1,7 +1,7 @@
 # Mystical Tutor 📚🔮
 Mystical Tutor is a dark, low-contrast, flat colorscheme for Vim and terminals. Although it works best with true colors (in GVim and supporting terminals with `set termguicolors`), it degrades gracefully to 256 and 16 colors for use with compatible terminals. Special attention has been paid to legibility in diff mode.
 
-![main image](https://caksoylar.github.io/mysticaltutor/images/mystical-24bit.png)
+![main image](https://caksoylar.github.io/mysticaltutor/images/mysticaltutor.png)
 
 ## Installation
 Download `colors/mysticaltutor.vim` into a `colors` folder in Vim's `runtimepath` e.g. `~/.vim` or `%USERPROFILE%\vimfiles`. Alternatively, use your favorite package manager.
@@ -30,6 +30,9 @@ Still under active development, so colors and styles might change.
 Diff highlights:
 
 ![diff](https://caksoylar.github.io/mysticaltutor/images/mystical-diff.png)
+
+Python snippet, tabline and highlights for all syntax definitions:
+![syntax](https://caksoylar.github.io/mysticaltutor/images/mystical-24bit.png)
 
 256 colors:
 
