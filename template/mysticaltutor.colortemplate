@@ -108,6 +108,7 @@ Visual              brightblue    darkgray      reverse
 VisualNOS           none          none          underline
 WarningMsg          black         brightyellow
 WildMenu            cyan          darkblue      bold
+
 # Other conventional group names (see `:help group-name`)
 Boolean          -> Constant
 Character        -> Constant
@@ -117,7 +118,7 @@ Constant            red           none
 Define           -> PreProc
 Debug            -> Special
 Delimiter        -> Special
-Error               red           none          t=reverse,bold g=standout,bold
+Error               red           none          bold
 Exception        -> Statement
 Float            -> Constant
 Function            brightmagenta none
@@ -140,7 +141,7 @@ StorageClass     -> Type
 String              green         none
 Structure        -> Type
 Tag              -> Special
-Todo                cyan          none          reverse
+Todo                cyan          none          bold
 Type                magenta       none
 Typedef          -> Type
 Underlined          none          none          underline

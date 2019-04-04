@@ -4,7 +4,7 @@
 " Maintainer:   Cem Aksoylar
 " Website:      https://github.com/caksoylar/vim-mysticaltutor
 " License:      MIT
-" Last Updated: Thu 04 Apr 2019 03:28:40 PM PDT
+" Last Updated: Thu 04 Apr 2019 03:43:06 PM PDT
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'mysticaltutor_use16', &t_Co < 256) ? 16 : 256))
@@ -85,7 +85,7 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi! link Define PreProc
   hi! link Debug Special
   hi! link Delimiter Special
-  hi Error ctermfg=168 ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,standout
+  hi Error ctermfg=168 ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi! link Exception Statement
   hi! link Float Constant
   hi Function ctermfg=147 ctermbg=NONE guifg=#b1a3df guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -108,7 +108,7 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi String ctermfg=107 ctermbg=NONE guifg=#8bbe67 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Structure Type
   hi! link Tag Special
-  hi Todo ctermfg=72 ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi Todo ctermfg=72 ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi Type ctermfg=98 ctermbg=NONE guifg=#8b5fc7 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Typedef Type
   hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
@@ -185,7 +185,7 @@ hi Constant ctermfg=DarkRed ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cte
 hi! link Define PreProc
 hi! link Debug Special
 hi! link Delimiter Special
-hi Error ctermfg=DarkRed ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,standout
+hi Error ctermfg=DarkRed ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi! link Exception Statement
 hi! link Float Constant
 hi Function ctermfg=Magenta ctermbg=NONE guifg=#b1a3df guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -208,7 +208,7 @@ hi! link StorageClass Type
 hi String ctermfg=DarkGreen ctermbg=NONE guifg=#8bbe67 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Structure Type
 hi! link Tag Special
-hi Todo ctermfg=DarkCyan ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi Todo ctermfg=DarkCyan ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Type ctermfg=DarkMagenta ctermbg=NONE guifg=#8b5fc7 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Typedef Type
 hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
@@ -299,7 +299,7 @@ finish
 " Define           -> PreProc
 " Debug            -> Special
 " Delimiter        -> Special
-" Error               red           none          t=reverse,bold g=standout,bold
+" Error               red           none          bold
 " Exception        -> Statement
 " Float            -> Constant
 " Function            brightmagenta none
@@ -322,7 +322,7 @@ finish
 " String              green         none
 " Structure        -> Type
 " Tag              -> Special
-" Todo                cyan          none          reverse
+" Todo                cyan          none          bold
 " Type                magenta       none
 " Typedef          -> Type
 " Underlined          none          none          underline
