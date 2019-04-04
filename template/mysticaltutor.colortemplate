@@ -155,23 +155,11 @@ lCursor          -> Cursor
 
 # Terminal colors {{{
 verbatim
-let g:terminal_ansi_colors = [
-    \ '@guiblack',
-    \ '@guired',
-    \ '@guigreen',
-    \ '@guiyellow',
-    \ '@guiblue',
-    \ '@guimagenta',
-    \ '@guicyan',
-    \ '@guiwhite',
-    \ '@guidarkgray',
-    \ '@guibrightred',
-    \ '@guibrightgreen',
-    \ '@guibrightyellow',
-    \ '@guibrightblue',
-    \ '@guibrightmagenta',
-    \ '@guibrightcyan',
-    \ '@guibrightwhite'
-\ ]
+let s:terminal_colors = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta', '@guicyan', '@guiwhite', '@guidarkgray', '@guibrightred', '@guibrightgreen', '@guibrightyellow', '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
+if has('nvim')
+    call execute(map(s:terminal_colors, {ind, val -> printf("let g:terminal_color_%d = '%s'", ind, val)}))
+else
+    let g:terminal_ansi_colors = s:terminal_colors
+endif
 endverbatim
 # }}}

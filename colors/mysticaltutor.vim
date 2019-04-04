@@ -4,7 +4,7 @@
 " Maintainer:   Cem Aksoylar
 " Website:      https://github.com/caksoylar/vim-mysticaltutor
 " License:      MIT
-" Last Updated: Sat 12 Jan 2019 11:36:48 PM STD
+" Last Updated: Thu 04 Apr 2019 03:28:40 PM PDT
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'mysticaltutor_use16', &t_Co < 256) ? 16 : 256))
@@ -113,24 +113,12 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi! link Typedef Type
   hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
   hi! link lCursor Cursor
-  let g:terminal_ansi_colors = [
-        \ '#1e2227',
-        \ '#e07093',
-        \ '#8bbe67',
-        \ '#bb8e67',
-        \ '#5c8ec7',
-        \ '#8b5fc7',
-        \ '#5cbe97',
-        \ '#d9d9d9',
-        \ '#30343c',
-        \ '#dfb4c9',
-        \ '#b1c6ac',
-        \ '#c3b470',
-        \ '#a0b4cf',
-        \ '#b1a3df',
-        \ '#a0c4bd',
-        \ '#ffffff'
-        \ ]
+  let s:terminal_colors = ['#1e2227', '#e07093', '#8bbe67', '#bb8e67', '#5c8ec7', '#8b5fc7', '#5cbe97', '#d9d9d9', '#30343c', '#dfb4c9', '#b1c6ac', '#c3b470', '#a0b4cf', '#b1a3df', '#a0c4bd', '#ffffff']
+  if has('nvim')
+    call execute(map(s:terminal_colors, {ind, val -> printf("let g:terminal_color_%d = '%s'", ind, val)}))
+  else
+    let g:terminal_ansi_colors = s:terminal_colors
+  endif
   finish
 endif
 
@@ -225,24 +213,12 @@ hi Type ctermfg=DarkMagenta ctermbg=NONE guifg=#8b5fc7 guibg=NONE guisp=NONE cte
 hi! link Typedef Type
 hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
 hi! link lCursor Cursor
-let g:terminal_ansi_colors = [
-      \ '#1e2227',
-      \ '#e07093',
-      \ '#8bbe67',
-      \ '#bb8e67',
-      \ '#5c8ec7',
-      \ '#8b5fc7',
-      \ '#5cbe97',
-      \ '#d9d9d9',
-      \ '#30343c',
-      \ '#dfb4c9',
-      \ '#b1c6ac',
-      \ '#c3b470',
-      \ '#a0b4cf',
-      \ '#b1a3df',
-      \ '#a0c4bd',
-      \ '#ffffff'
-      \ ]
+let s:terminal_colors = ['#1e2227', '#e07093', '#8bbe67', '#bb8e67', '#5c8ec7', '#8b5fc7', '#5cbe97', '#d9d9d9', '#30343c', '#dfb4c9', '#b1c6ac', '#c3b470', '#a0b4cf', '#b1a3df', '#a0c4bd', '#ffffff']
+if has('nvim')
+  call execute(map(s:terminal_colors, {ind, val -> printf("let g:terminal_color_%d = '%s'", ind, val)}))
+else
+  let g:terminal_ansi_colors = s:terminal_colors
+endif
 finish
 
 " Background: dark
