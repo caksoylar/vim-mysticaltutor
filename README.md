@@ -22,8 +22,6 @@ A simple tmux theme (displayed below) that you can append to your `tmux.conf` ca
 * [terminal.sexy](https://terminal.sexy) used for creating some of the terminal themes
 
 ## Todo
-Still under active development, so colors and styles might change.
-* Overhaul `Spell*` highlights by using underline and undercurl instead of foreground colors
 * Fix `PmenuSel` for 16 colors
 
 ## More screenshots

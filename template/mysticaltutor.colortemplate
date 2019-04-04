@@ -91,10 +91,6 @@ QuickFixLine     -> Search
 Search              blue          black         t=reverse g=standout
 SignColumn          none          none
 SpecialKey          gray          none
-SpellBad            brightred     black         s=red
-SpellCap            brightblue    black         s=blue
-SpellLocal          brightmagenta black         s=magenta
-SpellRare           brightcyan    black         s=cyan reverse
 StatusLine          white         darkblue      bold
 StatusLineNC        gray          darkgray
 StatusLineTerm   -> StatusLine
@@ -152,6 +148,27 @@ lCursor          -> Cursor
 # See `:help window-toolbar`
 # ToolbarLine         none          black
 # ToolbarButton       white         black         bold
+# }}}
+
+# Spelling groups {{{
+verbatim
+if !has('gui_running')
+endverbatim
+    # Color the fg since undercurl is not colored in terminal
+    SpellBad            red           none          undercurl
+    SpellCap            blue          none          undercurl
+    SpellLocal          magenta       none          undercurl
+    SpellRare           cyan          none          undercurl
+verbatim
+else
+endverbatim
+    SpellBad            none          none          undercurl s=red
+    SpellCap            none          none          undercurl s=blue
+    SpellLocal          none          none          undercurl s=magenta
+    SpellRare           none          none          undercurl s=cyan
+verbatim
+endif
+endverbatim
 # }}}
 
 # Terminal colors {{{

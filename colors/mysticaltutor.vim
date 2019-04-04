@@ -4,7 +4,7 @@
 " Maintainer:   Cem Aksoylar
 " Website:      https://github.com/caksoylar/vim-mysticaltutor
 " License:      MIT
-" Last Updated: Thu 04 Apr 2019 03:43:06 PM PDT
+" Last Updated: Thu 04 Apr 2019 03:49:55 PM PDT
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'mysticaltutor_use16', &t_Co < 256) ? 16 : 256))
@@ -60,10 +60,6 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi Search ctermfg=67 ctermbg=235 guifg=#5c8ec7 guibg=#1e2227 guisp=NONE cterm=NONE,reverse gui=NONE,standout
   hi SignColumn ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi SpecialKey ctermfg=248 ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi SpellBad ctermfg=182 ctermbg=235 guifg=#dfb4c9 guibg=#1e2227 guisp=#e07093 cterm=NONE gui=NONE
-  hi SpellCap ctermfg=110 ctermbg=235 guifg=#a0b4cf guibg=#1e2227 guisp=#5c8ec7 cterm=NONE gui=NONE
-  hi SpellLocal ctermfg=147 ctermbg=235 guifg=#b1a3df guibg=#1e2227 guisp=#8b5fc7 cterm=NONE gui=NONE
-  hi SpellRare ctermfg=152 ctermbg=235 guifg=#a0c4bd guibg=#1e2227 guisp=#5cbe97 cterm=NONE,reverse gui=NONE,reverse
   hi StatusLine ctermfg=253 ctermbg=24 guifg=#d9d9d9 guibg=#304a68 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi StatusLineNC ctermfg=248 ctermbg=236 guifg=#a0a4aa guibg=#30343c guisp=NONE cterm=NONE gui=NONE
   hi! link StatusLineTerm StatusLine
@@ -113,6 +109,17 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi! link Typedef Type
   hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
   hi! link lCursor Cursor
+  if !has('gui_running')
+    hi SpellBad ctermfg=168 ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cterm=NONE,undercurl gui=NONE,undercurl
+    hi SpellCap ctermfg=67 ctermbg=NONE guifg=#5c8ec7 guibg=NONE guisp=NONE cterm=NONE,undercurl gui=NONE,undercurl
+    hi SpellLocal ctermfg=98 ctermbg=NONE guifg=#8b5fc7 guibg=NONE guisp=NONE cterm=NONE,undercurl gui=NONE,undercurl
+    hi SpellRare ctermfg=72 ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE,undercurl gui=NONE,undercurl
+  else
+    hi SpellBad ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#e07093 cterm=NONE,undercurl gui=NONE,undercurl
+    hi SpellCap ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#5c8ec7 cterm=NONE,undercurl gui=NONE,undercurl
+    hi SpellLocal ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#8b5fc7 cterm=NONE,undercurl gui=NONE,undercurl
+    hi SpellRare ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#5cbe97 cterm=NONE,undercurl gui=NONE,undercurl
+  endif
   let s:terminal_colors = ['#1e2227', '#e07093', '#8bbe67', '#bb8e67', '#5c8ec7', '#8b5fc7', '#5cbe97', '#d9d9d9', '#30343c', '#dfb4c9', '#b1c6ac', '#c3b470', '#a0b4cf', '#b1a3df', '#a0c4bd', '#ffffff']
   if has('nvim')
     call execute(map(s:terminal_colors, {ind, val -> printf("let g:terminal_color_%d = '%s'", ind, val)}))
@@ -160,10 +167,6 @@ hi! link QuickFixLine Search
 hi Search ctermfg=DarkBlue ctermbg=Black guifg=#5c8ec7 guibg=#1e2227 guisp=NONE cterm=NONE,reverse gui=NONE,standout
 hi SignColumn ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SpecialKey ctermfg=Gray ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi SpellBad ctermfg=Red ctermbg=Black guifg=#dfb4c9 guibg=#1e2227 guisp=#e07093 cterm=NONE gui=NONE
-hi SpellCap ctermfg=Blue ctermbg=Black guifg=#a0b4cf guibg=#1e2227 guisp=#5c8ec7 cterm=NONE gui=NONE
-hi SpellLocal ctermfg=Magenta ctermbg=Black guifg=#b1a3df guibg=#1e2227 guisp=#8b5fc7 cterm=NONE gui=NONE
-hi SpellRare ctermfg=Cyan ctermbg=Black guifg=#a0c4bd guibg=#1e2227 guisp=#5cbe97 cterm=NONE,reverse gui=NONE,reverse
 hi StatusLine ctermfg=Gray ctermbg=DarkBlue guifg=#d9d9d9 guibg=#304a68 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi StatusLineNC ctermfg=Gray ctermbg=DarkGray guifg=#a0a4aa guibg=#30343c guisp=NONE cterm=NONE gui=NONE
 hi! link StatusLineTerm StatusLine
@@ -213,6 +216,17 @@ hi Type ctermfg=DarkMagenta ctermbg=NONE guifg=#8b5fc7 guibg=NONE guisp=NONE cte
 hi! link Typedef Type
 hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
 hi! link lCursor Cursor
+if !has('gui_running')
+  hi SpellBad ctermfg=DarkRed ctermbg=NONE guifg=#e07093 guibg=NONE guisp=NONE cterm=NONE,undercurl gui=NONE,undercurl
+  hi SpellCap ctermfg=DarkBlue ctermbg=NONE guifg=#5c8ec7 guibg=NONE guisp=NONE cterm=NONE,undercurl gui=NONE,undercurl
+  hi SpellLocal ctermfg=DarkMagenta ctermbg=NONE guifg=#8b5fc7 guibg=NONE guisp=NONE cterm=NONE,undercurl gui=NONE,undercurl
+  hi SpellRare ctermfg=DarkCyan ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cterm=NONE,undercurl gui=NONE,undercurl
+else
+  hi SpellBad ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#e07093 cterm=NONE,undercurl gui=NONE,undercurl
+  hi SpellCap ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#5c8ec7 cterm=NONE,undercurl gui=NONE,undercurl
+  hi SpellLocal ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#8b5fc7 cterm=NONE,undercurl gui=NONE,undercurl
+  hi SpellRare ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#5cbe97 cterm=NONE,undercurl gui=NONE,undercurl
+endif
 let s:terminal_colors = ['#1e2227', '#e07093', '#8bbe67', '#bb8e67', '#5c8ec7', '#8b5fc7', '#5cbe97', '#d9d9d9', '#30343c', '#dfb4c9', '#b1c6ac', '#c3b470', '#a0b4cf', '#b1a3df', '#a0c4bd', '#ffffff']
 if has('nvim')
   call execute(map(s:terminal_colors, {ind, val -> printf("let g:terminal_color_%d = '%s'", ind, val)}))
@@ -240,90 +254,3 @@ finish
 " Color: brightcyan    #a0c4bd   ~         Cyan
 " Color: white         #d9d9d9   ~         Gray
 " Color: brightwhite   #ffffff   ~         White
-"     Normal    white   none
-"     Terminal  white   none
-"     Normal    white   black
-"     Terminal  white   black
-" ColorColumn         none          darkgray
-" Conceal             none          none
-" Cursor              none          none          reverse
-" CursorColumn        none          none          bold
-" CursorLine          none          darkgray
-" CursorLineNr        brightwhite   darkgray
-" DiffAdd             green         darkgray      reverse
-" DiffChange          brightyellow  darkgray      reverse
-" DiffDelete          red           darkgray      reverse
-" DiffText            yellow        darkgray      reverse
-" Directory           blue          none
-" EndOfBuffer      -> NonText
-" ErrorMsg            black         red
-" FoldColumn       -> LineNr
-" Folded              gray          none          italic
-" IncSearch           yellow        black         t=reverse g=standout
-" LineNr              gray          none
-" MatchParen          cyan          none
-" ModeMsg             cyan          none
-" MoreMsg             cyan          none
-" NonText             gray          none
-" Pmenu               white         darkblue
-" PmenuSbar           none          darkgray
-" PmenuSel            white         blue
-" PmenuThumb          none          blue
-" Question            green         none
-" QuickFixLine     -> Search
-" Search              blue          black         t=reverse g=standout
-" SignColumn          none          none
-" SpecialKey          gray          none
-" SpellBad            brightred     black         s=red
-" SpellCap            brightblue    black         s=blue
-" SpellLocal          brightmagenta black         s=magenta
-" SpellRare           brightcyan    black         s=cyan reverse
-" StatusLine          white         darkblue      bold
-" StatusLineNC        gray          darkgray
-" StatusLineTerm   -> StatusLine
-" StatusLineTermNC -> StatusLineNC
-" TabLine             gray          darkgray
-" TabLineFill         white         darkgray
-" TabLineSel          white         darkblue      bold
-" Title               brightwhite   none
-" VertSplit           darkgray      darkgray
-" Visual              brightblue    darkgray      reverse
-" VisualNOS           none          none          underline
-" WarningMsg          black         brightyellow
-" WildMenu            cyan          darkblue      bold
-" Boolean          -> Constant
-" Character        -> Constant
-" Comment             gray          none
-" Conditional      -> Statement
-" Constant            red           none
-" Define           -> PreProc
-" Debug            -> Special
-" Delimiter        -> Special
-" Error               red           none          bold
-" Exception        -> Statement
-" Float            -> Constant
-" Function            brightmagenta none
-" Identifier          cyan          none
-" Ignore              none          none
-" Include          -> PreProc
-" Keyword          -> Statement
-" Label            -> Statement
-" Macro            -> PreProc
-" Number           -> Constant
-" Operator         -> Statement
-" PreCondit        -> PreProc
-" PreProc             brightgreen   none
-" Repeat           -> Statement
-" Special             yellow        none
-" SpecialChar      -> Special
-" SpecialComment   -> Special
-" Statement           blue          none
-" StorageClass     -> Type
-" String              green         none
-" Structure        -> Type
-" Tag              -> Special
-" Todo                cyan          none          bold
-" Type                magenta       none
-" Typedef          -> Type
-" Underlined          none          none          underline
-" lCursor          -> Cursor
