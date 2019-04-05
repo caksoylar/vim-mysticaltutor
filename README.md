@@ -21,9 +21,6 @@ A simple tmux theme (displayed below) that you can append to your `tmux.conf` ca
 * Technical details lifted wholesale from the excellent [Apprentice](https://github.com/romainl/Apprentice) by [romainl](https://github.com/romainl), such as how to best combine Visual/Cursorline/Diff highlights
 * [terminal.sexy](https://terminal.sexy) used for creating some of the terminal themes
 
-## Todo
-* Fix `PmenuSel` for 16 colors
-
 ## More screenshots
 Diff highlights:
 
