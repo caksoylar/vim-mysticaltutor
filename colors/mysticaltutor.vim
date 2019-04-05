@@ -4,7 +4,7 @@
 " Maintainer:   Cem Aksoylar
 " Website:      https://github.com/caksoylar/vim-mysticaltutor
 " License:      MIT
-" Last Updated: Thu 04 Apr 2019 03:49:55 PM PDT
+" Last Updated: Thu 04 Apr 2019 07:19:27 PM DST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'mysticaltutor_use16', &t_Co < 256) ? 16 : 256))
@@ -53,7 +53,7 @@ if !get(g:, 'mysticaltutor_use16', &t_Co < 256)
   hi NonText ctermfg=248 ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Pmenu ctermfg=253 ctermbg=24 guifg=#d9d9d9 guibg=#304a68 guisp=NONE cterm=NONE gui=NONE
   hi PmenuSbar ctermfg=NONE ctermbg=236 guifg=NONE guibg=#30343c guisp=NONE cterm=NONE gui=NONE
-  hi PmenuSel ctermfg=253 ctermbg=67 guifg=#d9d9d9 guibg=#5c8ec7 guisp=NONE cterm=NONE gui=NONE
+  hi PmenuSel ctermfg=235 ctermbg=72 guifg=#1e2227 guibg=#5cbe97 guisp=NONE cterm=NONE gui=NONE
   hi PmenuThumb ctermfg=NONE ctermbg=67 guifg=NONE guibg=#5c8ec7 guisp=NONE cterm=NONE gui=NONE
   hi Question ctermfg=107 ctermbg=NONE guifg=#8bbe67 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link QuickFixLine Search
@@ -160,7 +160,7 @@ hi MoreMsg ctermfg=DarkCyan ctermbg=NONE guifg=#5cbe97 guibg=NONE guisp=NONE cte
 hi NonText ctermfg=Gray ctermbg=NONE guifg=#a0a4aa guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Pmenu ctermfg=Gray ctermbg=DarkBlue guifg=#d9d9d9 guibg=#304a68 guisp=NONE cterm=NONE gui=NONE
 hi PmenuSbar ctermfg=NONE ctermbg=DarkGray guifg=NONE guibg=#30343c guisp=NONE cterm=NONE gui=NONE
-hi PmenuSel ctermfg=Gray ctermbg=DarkBlue guifg=#d9d9d9 guibg=#5c8ec7 guisp=NONE cterm=NONE gui=NONE
+hi PmenuSel ctermfg=Black ctermbg=DarkCyan guifg=#1e2227 guibg=#5cbe97 guisp=NONE cterm=NONE gui=NONE
 hi PmenuThumb ctermfg=NONE ctermbg=DarkBlue guifg=NONE guibg=#5c8ec7 guisp=NONE cterm=NONE gui=NONE
 hi Question ctermfg=DarkGreen ctermbg=NONE guifg=#8bbe67 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link QuickFixLine Search

@@ -84,7 +84,7 @@ MoreMsg             cyan          none
 NonText             gray          none
 Pmenu               white         darkblue
 PmenuSbar           none          darkgray
-PmenuSel            white         blue
+PmenuSel            black         cyan
 PmenuThumb          none          blue
 Question            green         none
 QuickFixLine     -> Search
