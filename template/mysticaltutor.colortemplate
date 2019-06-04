@@ -1,15 +1,24 @@
 # vim: ft=colortemplate fdm=marker
 
 # Information {{{
-Full name:     Mystical Tutor
-Short name:    mysticaltutor
-Author:        Cem Aksoylar
-Website:       https://github.com/caksoylar/vim-mysticaltutor
-Description:   Low-contrast flat colorscheme
-License:       MIT
+# Mandatory
+Full name: Mystical Tutor
+Short name: mysticaltutor
+Author: Cem Aksoylar
+Maintainer: Cem Aksoylar
+# Optional
+Website: https://github.com/caksoylar/vim-mysticaltutor
+Description: Low-contrast flat colorscheme
+License: MIT
+Terminal Colors: 256,16
 Option Prefix: mysticaltutor
-Neovim:        yes
 # }}}
+
+# Documentation {{{
+# Include: _help.colortemplate
+# }}}
+
+Background: dark
 
 # Color palette {{{
 # Color name         GUI       Base256   Base16 (optional)
@@ -33,19 +42,23 @@ Color: white         #d9d9d9   ~         Gray
 Color: brightwhite   #ffffff   ~         White
 # }}}
 
-Background: dark
-Variant: gui 256 16
-
 # Default highlight groups {{{
-#if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
+verbatim
+if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
+endverbatim
     # Transparent background
     Normal    white   none
+    # See `:help terminal-size-color`
     Terminal  white   none
-#else
+verbatim
+else
+endverbatim
     # Opaque background
     Normal    white   black
     Terminal  white   black
-#endif
+verbatim
+endif
+endverbatim
 
 # Group             Foreground    Background    Attributes
 ColorColumn         none          darkgray
@@ -128,26 +141,43 @@ Todo                cyan          none          bold
 Type                magenta       none
 Typedef          -> Type
 Underlined          none          none          underline
+# See `:help lCursor`
 lCursor          -> Cursor
+# See `:help CursorIM`
 # CursorIM            none          fg
-ToolbarLine         gray          darkgray
-ToolbarButton       white         darkblue      bold
+# See `:help window-toolbar`
+# ToolbarLine         none          black
+# ToolbarButton       white         black         bold
 # }}}
 
 # Spelling groups {{{
-Variant: 256 16
-# Color the fg since undercurl is not colored in terminal
-SpellBad            red           none          undercurl
-SpellCap            blue          none          undercurl
-SpellLocal          magenta       none          undercurl
-SpellRare           cyan          none          undercurl
-Variant: gui
-SpellBad            none          none          undercurl s=red
-SpellCap            none          none          undercurl s=blue
-SpellLocal          none          none          undercurl s=magenta
-SpellRare           none          none          undercurl s=cyan
+verbatim
+if !has('gui_running')
+endverbatim
+    # Color the fg since undercurl is not colored in terminal
+    SpellBad            red           none          undercurl
+    SpellCap            blue          none          undercurl
+    SpellLocal          magenta       none          undercurl
+    SpellRare           cyan          none          undercurl
+verbatim
+else
+endverbatim
+    SpellBad            none          none          undercurl s=red
+    SpellCap            none          none          undercurl s=blue
+    SpellLocal          none          none          undercurl s=magenta
+    SpellRare           none          none          undercurl s=cyan
+verbatim
+endif
+endverbatim
 # }}}
 
 # Terminal colors {{{
-Term Colors: black red green yellow blue magenta cyan white darkgray brightred brightgreen brightyellow brightblue brightmagenta brightcyan brightwhite
+verbatim
+let s:terminal_colors = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta', '@guicyan', '@guiwhite', '@guidarkgray', '@guibrightred', '@guibrightgreen', '@guibrightyellow', '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
+if has('nvim')
+    call execute(map(s:terminal_colors, {ind, val -> printf("let g:terminal_color_%d = '%s'", ind, val)}))
+else
+    let g:terminal_ansi_colors = s:terminal_colors
+endif
+endverbatim
 # }}}
