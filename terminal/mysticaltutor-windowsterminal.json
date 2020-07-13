@@ -1,0 +1,31 @@
+// To use, copy scheme from "schemes" array into the corresponding array in your
+// settings.json file for Windows Terminal, and set the "colorScheme" field to
+// "Mystical Tutor" for whichever profile(s) you want to use the color scheme.
+
+{
+    "schemes": [{
+                    "name" : "Mystical Tutor",
+
+                    "cursorColor" : "#d9d9d9",
+                    
+                    "background" : "#1e2227",
+                    "foreground" : "#d9d9d9",
+                    
+                    "black" : "#1e2227",
+                    "blue" : "#5c8ec7",
+                    "cyan" : "#5cbe97",
+                    "green" : "#8bbe67",
+                    "purple" : "#8b5fc7",
+                    "red" : "#e07093",
+                    "white" : "#d9d9d9",
+                    "yellow" : "#bb8e67",
+                    "brightBlack" : "#30343c",
+                    "brightBlue" : "#a0b4cf",
+                    "brightCyan" : "#a0c4bd",
+                    "brightGreen" : "#b1c6ac",
+                    "brightPurple" : "#b1a3df",
+                    "brightRed" : "#dfb4c9",
+                    "brightWhite" : "#ffffff",
+                    "brightYellow" : "#c3b470"
+                }]
+}
