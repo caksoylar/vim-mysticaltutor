@@ -1,0 +1,25 @@
+colors:
+  primary:
+    background: '#1e2227'
+    foreground: '#d9d9d9'
+  # cursor:  # uncomment if you don't want reverse
+  #   text: '#1e2227'
+  #   cursor: '#d9d9d9'
+  normal:
+    black: '#1e2227'
+    red: '#e07093'
+    green: '#8bbe67'
+    yellow: '#bb8e67'
+    blue: '#5c8ec7'
+    magenta: '#8b5fc7'
+    cyan: '#5cbe97'
+    white: '#d9d9d9'
+  bright:
+    black: '#30343c'
+    red: '#dfb4c9'
+    green: '#b1c6ac'
+    yellow: '#c3b470'
+    blue: '#a0b4cf'
+    magenta: '#b1a3df'
+    cyan: '#a0c4bd'
+    white: '#ffffff'
