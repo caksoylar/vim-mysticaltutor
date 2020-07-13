@@ -4,9 +4,21 @@
 
 {
     "schemes": [{
+                    "name" : "Mystical Tutor",
+
+                    "cursorColor" : "#d9d9d9",
+                    
                     "background" : "#1e2227",
+                    "foreground" : "#d9d9d9",
+                    
                     "black" : "#1e2227",
                     "blue" : "#5c8ec7",
+                    "cyan" : "#5cbe97",
+                    "green" : "#8bbe67",
+                    "purple" : "#8b5fc7",
+                    "red" : "#e07093",
+                    "white" : "#d9d9d9",
+                    "yellow" : "#bb8e67",
                     "brightBlack" : "#30343c",
                     "brightBlue" : "#a0b4cf",
                     "brightCyan" : "#a0c4bd",
@@ -14,14 +26,6 @@
                     "brightPurple" : "#b1a3df",
                     "brightRed" : "#dfb4c9",
                     "brightWhite" : "#ffffff",
-                    "brightYellow" : "#c3b470",
-                    "cyan" : "#5cbe97",
-                    "foreground" : "#d9d9d9",
-                    "green" : "#8bbe67",
-                    "name" : "Mystical Tutor",
-                    "purple" : "#8b5fc7",
-                    "red" : "#e07093",
-                    "white" : "#d9d9d9",
-                    "yellow" : "#bb8e67"
+                    "brightYellow" : "#c3b470"
                 }]
 }
