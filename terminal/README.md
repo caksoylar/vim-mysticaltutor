@@ -1,5 +1,7 @@
 # Terminal themes for Mystical Tutor
 
+![terminal theme](https://caksoylar.github.io/mysticaltutor/images/mystical-terminal.png)
+
 ## Alacritty
 
 Replace the color definitions in your [alacritty.yml](https://github.com/alacritty/alacritty#configuration) with the definitions in `alacritty/mysticaltutor.yml`.
